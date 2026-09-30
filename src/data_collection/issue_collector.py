@@ -6,7 +6,7 @@ from github import Github
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-from src.database.models import Repository, Issue
+from src.database.models import Repository, Issue, Base
 
 
 load_dotenv()
@@ -20,6 +20,7 @@ DATABASE_URL = (
 )
 
 engine = create_engine(DATABASE_URL)
+Base.metadata.create_all(engine)
 
 
 with Session(engine) as session:

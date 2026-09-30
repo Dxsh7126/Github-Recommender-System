@@ -24,6 +24,8 @@ class Developer(Base):
     username = Column(String(255), unique=True, nullable=False)
     name = Column(String(255))
     bio = Column(Text)
+    language = Column(JSON)
+    recent_commits = Column(JSON)
     created_at = Column(DateTime)
 
     repositories = relationship(
