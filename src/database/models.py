@@ -2,6 +2,7 @@ from sqlalchemy import (
     Column,
     Integer,
     BigInteger,
+    Boolean,
     String,
     Text,
     DateTime,
@@ -40,6 +41,7 @@ class Repository(Base):
     full_name = Column(String(255), unique=True, nullable=False)
     description = Column(Text)
     url = Column(String(500))
+    issues_collected = Column(Boolean,default=False,nullable=False)
     language = Column(String(100))
     stars = Column(Integer, default=0)
     forks = Column(Integer, default=0)
