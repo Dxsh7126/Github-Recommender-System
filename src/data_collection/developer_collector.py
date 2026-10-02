@@ -22,7 +22,7 @@ DATABASE_URL = (
 engine = create_engine(DATABASE_URL)
 Base.metadata.create_all(engine)
 
-developers = ["Dxsh7126","torvalds","karpathy","gvanrossum","ad1tyq"]
+developers = ["Dxsh7126","torvalds","karpathy","gvanrossum","ad1tyq","mehulexe"]
 
 for username in developers:
     print(f"\nFetching developer: {username}")
